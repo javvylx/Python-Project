@@ -1,0 +1,242 @@
+ura_carpark_name,parking_place_code,season_parking_hours,vehicle_category,ticket_type,monthly_rate
+ADAM ROAD FOOD CENTRE AREA,GA002,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+ANCHORVALE CRESCENT HEAVY VEHICLE PARK,A0052,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+ANG MO KIO STREET 63,A0048,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+BALESTIER ROAD AREA,GB001,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+BALESTIER ROAD AREA,GB001,Everyday;7am to 7am (24 hrs),Car,Residential,65
+BEATTY ROAD AREA,GB005,Everyday;8.30am to 10pm,Car,Commercial,100
+BEATTY ROAD AREA,GB005,Everyday;8.30am to 10pm,Car,Residential,65
+BEDOK ROAD FOOD CENTRE OFF STREET,B0088,Everyday;8.30am to 10pm,Car,Commercial,80
+BENDEMEER ROAD HEAVY VEHICLE PARK,B0099,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+BENG WAN ROAD OFF STREET,B0023,Mon-Sat;7am to 7am (24 hrs),Car,Commercial,80
+BENG WAN ROAD OFF STREET,B0023,Mon-Sat;7am to 7am (24 hrs),Car,Residential,65
+BENOI SECTOR,B0042,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+BLAIR ROAD/EVERTON ROAD AREA,GB002,Everyday;7am to 7am (24 hrs),Car,Residential,65
+BRADDELL ROAD HEAVY VEHICLE PARK,B0082,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+BRADDELL ROAD HEAVY VEHICLE PARK,B0082,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+BRIGHTON CRESCENT,B0100,Everyday;8.30am to 10pm,Car,Commercial,80
+BRIGHTON CRESCENT,B0100,Everyday;8.30am to 10pm,Car,Residential,65
+BUKIT BATOK EAST AVENUE 2 HV PARK,B0086,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+BUKIT BATOK EAST AVENUE 2 HV PARK,B0086,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+BUKIT BATOK EAST AVENUE 2 HV PARK,B0086,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+BUKIT BATOK ROAD / JURONG ROAD OFF STREET,B0081,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+BUKIT TIMAH MARKET OFF STREET,B0032,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+CAIRNHILL ROAD SERVICE ROAD,C0053,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+CAIRNHILL ROAD SERVICE ROAD,C0053,Mon-Sat;8.30am to 5pm,Car,Residential,65
+CASUARINA ROAD AREA,GC001,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+CASUARINA ROAD AREA,GC001,Mon-Sat;8.30am to 5pm,Car,Residential,65
+CHANGI NORTH AREA,GC011,Everyday;7am to 7pm,Car,Commercial,80
+CHANGI ROAD AREA,GC002,Everyday;8.30am to 10pm,Car,Commercial,80
+CHANGI ROAD AREA,GC002,Everyday;8.30am to 10pm,Car,Residential,65
+CHANGI SOUTH AREA,GC010,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+CHANGI SOUTH LANE,C0161,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+CHIN BEE ROAD AREA,GC007,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+CHIN BEE ROAD AREA,GC007,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+CHIN BEE ROAD AREA,GC007,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+CLEMENCEAU AVENUE NORTH (NEWTON FC),C0148,Everyday;8.30am to 10pm,Car,Residential,65
+CORONATION ROAD AREA,GC004,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+CORONATION ROAD AREA,GC004,Mon-Sat;8.30am to 5pm,Car,Residential,65
+DAIRY FARM ROAD / PETIR ROAD HV PARK,D0029,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+DELTA CIRCUS FRINGE CAR PARK,D0028,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+DELTA CIRCUS FRINGE CAR PARK,D0028,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+DELTA CIRCUS FRINGE CAR PARK,D0028,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+EAST COAST PARK E1 OFF STREET,E0027,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+EAST COAST PARK E2 OFF STREET,E0024,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+EMERALD HILL ESTATE,GE001,Everyday;7am to 7am (24 hrs),Car,Residential,65
+FORT CANNING PARK A & B,GF001,Mon-Sat;8.30am to 5pm,Car,Commercial,140
+FORT CANNING PARK C OFF STREET,F0027,Mon-Sat;8.30am to 5pm,Car,Commercial,140
+FORT ROAD/EAST COAST PARK HV PARK,F0029,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+FORT ROAD/EAST COAST PARK HV PARK,F0029,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+FORT ROAD/EAST COAST PARK HV PARK,F0029,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+GEYLANG AREA,GG001,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+GEYLANG AREA,GG001,Mon-Sat;8.30am to 5pm,Car,Residential,65
+GOODLINK PARK / JALAN MATA AYER OFF STREET,G0043,Everyday;8.30am to 10pm,Car,Commercial,80
+GOODLINK PARK / JALAN MATA AYER OFF STREET,G0043,Everyday;8.30am to 10pm,Car,Residential,65
+GUL AREA,GG002,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,120
+GUL AREA,GG002,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+GUL AREA,GG002,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+HAPPY AVENUE NORTH,H0061,Mon-Sat;8.30am to 5pm,Car,Residential,65
+HILLVIEW TERRACE,H0021,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+HOLLAND DR/NORTH BOUNA VISTA RD OFF STREET,H0004,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+HORNE ROAD AREA,GH002,Everyday;8.30am to 10pm,Car,Commercial,100
+HORNE ROAD AREA,GH002,Everyday;8.30am to 10pm,Car,Residential,65
+JALAN BAHAR HEAVY VEHICLE PARK,J0099,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+JALAN BERSEH AREA,GJ006,Everyday;8.30am to 10pm,Car,Commercial,100
+JALAN BERSEH AREA,GJ006,Everyday;8.30am to 10pm,Car,Residential,65
+JALAN BESUT,J0117,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+JALAN BINCHANG,J0015,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+JALAN BINCHANG,J0015,Everyday;7am to 7am (24 hrs),Car,Residential,65
+JALAN KAYU OFF STREET,J0122,Everyday;8.30am to 10pm,Car,Commercial,80
+JALAN KUBOR (VICTORIA ST/ROCHOR CANAL RD),J0097,Everyday;7am to 7am (24 hrs),Car,Commercial,125
+JALAN LEGUNDI AREA,GJ002,Everyday;8.30am to 10pm,Car,Commercial,80
+JALAN LEGUNDI AREA,GJ002,Everyday;8.30am to 10pm,Car,Residential,65
+JALAN PELEPAH OFF STREET,J0100,Everyday;8.30am to 10pm,Car,Commercial,80
+JALAN PELEPAH OFF STREET,J0100,Everyday;8.30am to 10pm,Car,Residential,65
+JALAN PEMIMPIN,J0123,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+JALAN SEH CHUAN AREA,GJ005,Everyday;8.30am to 10pm,Car,Commercial,80
+JOO CHIAT AREA (HAIG ROAD/TELOK KURAU ROAD),GJ003,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+JOO CHIAT AREA (HAIG ROAD/TELOK KURAU ROAD),GJ003,Everyday;7am to 7am (24 hrs),Car,Residential,65
+JOO KOON AREA,GJ001,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,120
+JOO KOON AREA,GJ001,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+KAKI BUKIT AVENUE 4,K0022,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+KAKI BUKIT ROAD 1,K0006,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+KAKI BUKIT ROAD 2,K0091,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+KALLANG INDUSTRIAL ESTATE ZONE A,GK001,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+KALLANG INDUSTRIAL ESTATE ZONE B,GK002,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+KAMPONG AMPAT INDUSTRIAL ESTATE,GK008,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+KAMPONG BUGIS OFF STREET,K0082,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+KAMPONG GLAM AREA,GK003,Everyday;8.30am to 10pm,Car,Commercial,125
+KAMPONG GLAM AREA,GK003,Everyday;8.30am to 10pm,Car,Residential,65
+KAMPONG JAVA ROAD/ MAKEWAY AVENUE AREA,GK007,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+KAMPONG JAVA ROAD/ MAKEWAY AVENUE AREA,GK007,Mon-Sat;8.30am to 5pm,Car,Residential,65
+KAMPONG KAPOR ROAD OFF STREET,K0121,Everyday;8.30am to 10pm,Car,Commercial,100
+KEMPAS ROAD,K0120,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+KEMPAS ROAD,K0120,Everyday;7am to 7am (24 hrs),Car,Residential,65
+KEPPEL ROAD OFF STREET,K0108,Everyday;7am to 10pm,Car,Commercial,100
+KIM KEAT CLOSE,K0087,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+KIM KEAT CLOSE,K0087,Everyday;7am to 7am (24 hrs),Car,Residential,65
+KINTA ROAD OFF STREET,K0111,Everyday;7am to 7am (24 hrs),Car,Commercial,100
+KINTA ROAD OFF STREET,K0111,Everyday;8.30am to 10pm,Car,Commercial,100
+LIM TUA TOW AREA,GL001,Everyday;8.30am to 10pm,Car,Residential,65
+LITTLE INDIA A (BET BUFFALO & RANGOON RD),GL006,Everyday;7am to 7am (24 hrs),Car,Commercial,100
+LITTLE INDIA A (BET BUFFALO & RANGOON RD),GL006,Everyday;8.30am to 10pm,Car,Residential,65
+LOK YANG AREA,GL002,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,120
+LOK YANG AREA,GL002,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+LORONG 1 GEYLANG ROAD OFF STREET,L0115,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+LORONG BAKAR BATU,L0060,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+MACKENZIE ROAD AREA,GM004,Everyday;8.30am to 10pm,Car,Commercial,100
+MACKENZIE ROAD AREA,GM004,Everyday;8.30am to 10pm,Car,Residential,65
+MACKENZIE ROAD B OFF STREET,M0059,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+MACPHERSON ROAD AREA,GM005,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+MACPHERSON ROAD AREA,GM005,Mon-Sat;8.30am to 5pm,Car,Residential,65
+MARITIME SQUARE D OFF STREET,M0078,Everyday;7am to 10pm (W/Day),Car,Commercial,125
+MARSILING CRESCENT HEAVY VEHICLE PARK,M0079,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+MARSILING CRESCENT HEAVY VEHICLE PARK,M0079,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+MARSILING CRESCENT HEAVY VEHICLE PARK,M0079,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+MOHD SULTAN/RIVER VALLEY ROAD AREA,GM003,Everyday;8.30am to 10pm,Car,Residential,65
+MOONSTONE AREA,GM001,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+MOONSTONE AREA,GM001,Mon-Sat;8.30am to 5pm,Car,Residential,65
+NEO PEE TECK LANE,N0048,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+NEYTHAL ROAD,N0016,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+OUTRAM ROAD OFF STREET,O0028,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+PANDAN LOOP,P0086,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+PANDAN LOOP,P0086,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+PANDAN ROAD AREA,GP006,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+PANDAN ROAD AREA,GP006,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+PANDAN ROAD AREA,GP006,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+PASIR PANJANG FOOD CENTRE (TEMP) OFF ST,P0113,Everyday;8.30am to 10pm,Car,Commercial,80
+PASIR PANJANG FOOD CENTRE OFF STREET,P0054,Everyday;8.30am to 10pm,Car,Commercial,80
+PASIR PANJANG GARDEN AREA,GP001,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+PASIR PANJANG GARDEN AREA,GP001,Everyday;7am to 7am (24 hrs),Car,Residential,65
+PASIR PANJANG ROAD / SOUTH BUONA VISTA ROAD,P0094,Everyday;8.30am to 10pm,Car,Commercial,80
+PASIR PANJANG ROAD AREA,GP002,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+PASIR PANJANG ROAD AREA,GP002,Mon-Sat;8.30am to 5pm,Car,Residential,65
+PASIR PANJANG ROAD/ CLEMENTI ROAD OFF ST,P0106,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+PASIR RIS CLOSE OFF STREET,P0033,Everyday;8.30am to 10pm,Car,Commercial,80
+PASIR RIS DRIVE 1 HEAVY VEHICLE PARK,P0110,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+PASIR RIS PARK CAR PARK E OFF STREET,P0109,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+PIONEER SECTOR AREA,GP003,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,120
+PIONEER SECTOR AREA,GP003,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+PIONEER SECTOR AREA,GP003,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+PRINCE PHILIP AVENUE,P0116,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+QUEEN'S CRESCENT HEAVY VEHICLE PARK,Q0009,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+QUEEN'S CRESCENT HEAVY VEHICLE PARK,Q0009,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+QUEENSWAY OFF STREET ( RIDEOUT TEA GARDEN),Q0008,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+RACE COURSE ROAD / NORTHUMBERLAND ROAD,R0038,Everyday;8.30am to 10pm,Car,Commercial,100
+RANGOON/STARLIGHT ROAD AREA,GR001,Everyday;8.30am to 10pm,Car,Commercial,80
+RANGOON/STARLIGHT ROAD AREA,GR001,Everyday;8.30am to 10pm,Car,Residential,65
+RIVERSIDE ROAD,R0006,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+RIVERSIDE ROAD,R0006,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+SEAH IM ROAD OFF STREET,S0112,Everyday;7am to 10pm (W/Day),Car,Commercial,125
+SEAH IM ROAD OFF STREET,S0112,Everyday;7am to 7am (24 hrs),Motorcycle,Commercial,15
+SELETAR AEROSPACE VIEW,S0164,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+SEMBAWANG DRIVE HEAVY VEHICLE PARK,S0151,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+SEMBAWANG HILL ESTATE,GS005,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+SEMBAWANG HILL ESTATE,GS005,Mon-Sat;8.30am to 5pm,Car,Residential,65
+SEMBAWANG RD/ADMIRALTY RD EAST AREA,GS012,Everyday;8.30am to 10pm,Car,Commercial,80
+SEMBAWANG RD/ADMIRALTY RD EAST AREA,GS012,Everyday;8.30am to 10pm,Car,Residential,65
+SENGKANG EAST AND WEST WAY,S0163,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+SENOKO INDUSTRIAL AREA,GS011,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+SENOKO SOUTH ROAD,S0092,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+SERANGOON GARDEN ESTATE,GS002,Mon-Sat; 8.30am to 10pm,Car,Commercial,80
+SERANGOON GARDEN ESTATE,GS002,Mon-Sat; 8.30am to 10pm,Car,Residential,65
+SERVICE ROAD OFF CHOA CHU KANG AVE 1,S0033,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+SERVICE ROAD OFF CHOA CHU KANG AVE 1,S0033,Everyday;7am to 7am (24 hrs),Car,Residential,65
+SERVICE ROAD OFF JALAN KELULUT,S0168,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+SERVICE ROAD OFF JALAN KELULUT,S0168,Everyday;7am to 7am (24 hrs),Car,Residential,65
+SERVICE ROAD OFF JALAN SELASEH,S0167,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+SERVICE ROAD OFF JALAN SELASEH,S0167,Everyday;7am to 7am (24 hrs),Car,Residential,65
+SERVICE ROAD OFF MACPHERSON ROAD,S0158,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+SERVICE ROAD OFF MACPHERSON ROAD,S0158,Mon-Sat;8.30am to 5pm,Car,Residential,65
+SHREWSBURY AREA,GS007,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+SHREWSBURY AREA,GS007,Everyday;7am to 7am (24 hrs),Car,Residential,65
+SIMON ROAD/KOVAN ROAD AREA,GS003,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+SIN MING ROAD HEAVY VEHICLE PARK,S0109,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+SIN MING ROAD HEAVY VEHICLE PARK,S0109,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+SIN MING ROAD HEAVY VEHICLE PARK,S0109,Everyday;7am to 7pm,Car,Commercial,80
+SING AVENUE AREA,GS006,Everyday;8.30am to 10pm,Car,Commercial,80
+SING AVENUE AREA,GS006,Everyday;8.30am to 10pm,Car,Residential,65
+STAGMONT RING HEAVY VEHICLE PARK,S0111,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+STAGMONT RING HEAVY VEHICLE PARK,S0111,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+SUNGEI KADUT AREA,GS004,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+SUNGEI KADUT AREA,GS004,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,120
+SUNGEI KADUT AREA,GS004,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+SUNSHINE TERRACE AREA,GS010,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+SUNSHINE TERRACE AREA,GS010,Everyday;7am to 7am (24 hrs),Car,Residential,65
+TAGORE ROAD AREA,GT002,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+TAGORE ROAD AREA,GT002,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,120
+TAGORE ROAD AREA,GT002,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+TAI SENG AVENUE AREA,GT001,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+TAMPINES AVENUE 9/ AVENUE 10 HV PARK,T0131,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+TAMPINES AVENUE 9/ AVENUE 10 HV PARK,T0131,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+TAMPINES AVENUE 9/ AVENUE 10 HV PARK,T0131,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+TAMPINES RD / HOUGANG AVENUE 7 AREA,GT006,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+TAMPINES ROAD/HOUGANG AVE 7 HEAVY VEH PARK,T0107,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+TANGLIN HALT CLOSE,T0070,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+TANGLIN HALT CLOSE,T0070,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+TANJONG KATONG COMPLEX,T0129,Mon-Sat; 7am to 10pm,Car,Commercial,80
+TANJONG KATONG COMPLEX,T0129,Mon-Sat;7am to 10pm,Car,Commercial,65
+TANJONG KATONG RD OFF ST (OPP WILKINSON RD),T0141,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+TANJONG KATONG ROAD OFF STREET,T0140,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+TANJONG KATONG ROAD OFF STREET,T0140,Everyday;7am to 7am (24 hrs),Car,Residential,65
+TANJONG PENJURU AREA,GT003,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,120
+TANJONG PENJURU AREA,GT003,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+TANJONG PENJURU AREA,GT003,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+TEBAN GARDENS CRESCENT,T0116,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+TEBAN GARDENS CRESCENT,T0116,Everyday;7am to 7pm,Car,Commercial,80
+TELOK BLANGAH DRIVE HEAVY VEHICLE PARK,T0109,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+TELOK BLANGAH STREET 31,T0100,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+TOA PAYOH WEST,T0130,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+TUAS AREA,GT004,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,120
+TUAS AREA,GT004,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+TUAS AREA,GT004,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+TUAS SOUTH INDUSTRIAL AREA,GT005,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+UPPER CHANGI ROAD / BEDOK ROAD OFF STREET,U0042,Everyday;8.30am to 10pm,Car,Commercial,80
+UPPER EAST COAST AREA,GU003,Everyday;8.30am to 10pm,Car,Commercial,80
+UPPER EAST COAST AREA,GU003,Everyday;8.30am to 10pm,Car,Residential,65
+UPPER EAST COAST ROAD OFF STREET,U0036,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+UPPER THOMSON ROAD AREA (LAKEVIEW ESTATE),GU004,Everyday;8.30am to 10pm,Car,Commercial,80
+URA CENTRE (EAST WING),U0011,Everyday;7am to 7am (24 hrs),Motorcycle,Commercial,15
+URA MOTORCYCLE PARKS,GB007,Everyday;7am to 7am (24 hrs),Motorcycle,Commercial,15
+WEST COAST PARK 1 OFF STREET,W0029,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+WEST COAST PARK 1 OFF STREET,W0029,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+WHITLEY ROAD / THOMSON ROAD HEAVY VEH PARK,W0033,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+WHITLEY ROAD / THOMSON ROAD HEAVY VEH PARK,W0033,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+WHITLEY ROAD / THOMSON ROAD HEAVY VEH PARK,W0033,Everyday;7am to 7pm,Car,Commercial,80
+WISHART ROAD,W0021,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+WISHART ROAD,W0021,Mon-Sat;8.30am to 5pm,Car,Residential,65
+WOODLANDS EAST INDUSTRIAL ESTATE,GW002,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+WOODLANDS EAST INDUSTRIAL ESTATE,GW002,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+WOODLANDS EAST INDUSTRIAL ESTATE,GW002,Mon-Sat;8.30am to 5pm,Car,Commercial,80
+WOODLANDS INDUSTRIAL PARK E AREA,GW003,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+WOODLANDS INDUSTRIAL PARK E AREA,GW003,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+WOODLANDS ROAD LORRY PARK,W0013,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+WOODLANDS ROAD LORRY PARK,W0013,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+YISHUN AVENUE 7 HEAVY VEHICLE PARK,Y0017,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+YISHUN AVENUE 7 HEAVY VEHICLE PARK,Y0017,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+YISHUN AVENUE 7 HEAVY VEHICLE PARK,Y0017,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+YISHUN INDUSTRIAL PARK A,Y0013,Everyday;7am to 7am (24 hrs),Car,Commercial,80
+YISHUN INDUSTRIAL PARK A,Y0013,Everyday;7am to 7am (24 hrs),Heavy Vehicle,Commercial,130
+YISHUN INDUSTRIAL PARK A,Y0013,Everyday;7am to 7am (24 hrs),Crane,Commercial,130
+ZION ROAD AREA,GZ001,Everyday;8.30am to 10pm,Car,Commercial,80
+ZION ROAD AREA,GZ001,Everyday;8.30am to 10pm,Car,Residential,65
