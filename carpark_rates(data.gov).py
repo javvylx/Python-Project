@@ -1,24 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import os
 import pandas as pd
-
-
-# In[2]:
-
 
 #data processing into dataframe
 raw_data = pd.read_csv("Datasets/Carpark Rates.csv")
 columns = raw_data.columns.tolist()
 df = pd.DataFrame(raw_data, columns = columns)
-
-
-# In[3]:
-
 
 #search for carpark
 def search_carpark(input):
@@ -30,10 +19,6 @@ def search_carpark(input):
     return array
 
 #search_carpark('Complex')
-
-
-# In[4]:
-
 
 def get_rate(carpark_name, day = 'None'):
     '''returns carpark rate in string for carpark and day. 
@@ -52,16 +37,7 @@ def get_rate(carpark_name, day = 'None'):
         if day == 'sunday' or day == 'holiday':
             return df.loc[row, 'sunday_publicholiday_rate']
 
-
-# In[11]:
-
-
 rate = get_rate('Heartland Mall', 'weekday')
 rate.weekdays_rate_1, rate.weekdays_rate_2
-
-
-# In[ ]:
-
-
 
 

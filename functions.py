@@ -1,24 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import os
 import pandas as pd
-
-
-# In[2]:
-
 
 #data processing into dataframe
 raw_data = pd.read_csv("Datasets/Hdb Carpark Information.csv")
 columns = raw_data.columns.tolist()
 df = pd.DataFrame(raw_data, columns = columns)
-
-
-# In[3]:
-
 
 #search for carpark address
 def search_carparkaddress(input):
@@ -30,10 +19,6 @@ def search_carparkaddress(input):
     return array
 
 search_carparkaddress('dover')
-
-
-# In[4]:
-
 
 #short_term_parking
 
@@ -59,10 +44,6 @@ def findTypes_shorttermparking(type):
         return carparks
     #return len(carparks) for number of carparks with 'type'
 
-
-# In[5]:
-
-
 #Free Parking
 
 def has_freeparking(carpark_no):
@@ -81,10 +62,6 @@ def get_freeparking(carpark_no):
 
 #get_freeparking('AH1')
 
-
-# In[6]:
-
-
 #Night Parking
 
 def has_nightparking(carpark_no):
@@ -98,10 +75,6 @@ def has_nightparking(carpark_no):
     
 #has_nightparking('AH1')
 
-
-# In[13]:
-
-
 #gantry height
 def get_gantryheight(carpark_no):
     '''returns gantry height of carpark, 0 means surface carpark'''
@@ -110,25 +83,11 @@ def get_gantryheight(carpark_no):
 
 get_gantryheight('AH1')
 
-
-# In[10]:
-
-
 #Basement carpark
 def has_basement(carpark_no):
     '''returns True if carpark has basement, else False'''
     row = df.loc[df['car_park_no'] == carpark_no].index[0]
     return df.loc[row, 'car_park_basement'] == 'Y'
 
-
-# In[12]:
-
-
 has_basement('ACB')
-
-
-# In[ ]:
-
-
-
 
