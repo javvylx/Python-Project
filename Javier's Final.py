@@ -39,7 +39,7 @@ def carparkInfoList():
 
     print df  # Print out whole dataframe for carpark availablity
 
-    carparkinfodf = pd.read_csv("Hdb Carpark Information.csv")  # Read the HDB Carpark Info csv dataset
+    carparkinfodf = pd.read_csv("Datasets/Hdb Carpark Information.csv")  # Read the HDB Carpark Info csv dataset
 
     finaldf = pd.merge(df, carparkinfodf[['car_park_no', 'address']], on=['car_park_no'])
     # Merging API to CSV's key "car_park_no", to join "address" to "carpark availability" dataset
@@ -90,7 +90,7 @@ def carparkInfoList():
         else:
             lotsavail = int(rows["Lots Available"])  # if there is one row, the value will be equals the searched item
 
-    labels = ["Carpark\nAvailable", "Carpark\nOccupied"]  # Create Labels for Bar Chart
+    labels = ["Carpark\nOccupied", "Carpark\nAvailable"]  # Create Labels for Bar Chart
     values = [lotsoccupied, lotsavail]  # Store Values in List
     totaldata = lotsoccupied + lotsavail  # Get the total lots data
     plt.bar(labels, values)  # Plot out bar graph
@@ -101,7 +101,7 @@ def carparkInfoList():
 
 def BasementCarparkPieChart():
     """User searches for carpark address, then displays carpark basement available for that carpark. Then finally display all the information in a pie chart."""
-    carparkinfodf = pd.read_csv("Hdb Carpark Information.csv", index_col=0)  # Read the HDB Carpark Info csv dataset
+    carparkinfodf = pd.read_csv("Datasets/Hdb Carpark Information.csv", index_col=0)  # Read the HDB Carpark Info csv dataset
 
     print carparkinfodf[["address", "car_park_basement"]]  # Print only two parameters in this dataframe
 
@@ -112,9 +112,7 @@ def BasementCarparkPieChart():
     SearchCarParkName = carparkinfodf[
         carparkinfodf['address'].str.contains(carparkInputUpper)]  # Convert the input to upper case
     SearchCarParkName.sort_values(by="car_park_basement",
-                                  inplace=True)  # Sorting the values of carpark basement in ascending case
-
-    print SearchCarParkName[["address", "car_park_basement"]]  # Print only two parameters in this dataframe
+                                  ascending=True)  # Sorting the values of carpark basement in ascending case
 
     ndata = SearchCarParkName.loc[SearchCarParkName["car_park_basement"] == "N"].count()[
         0]  # Locate carpark basement parameter 'N' in the dataframe
@@ -149,4 +147,4 @@ def TypesOfCarparkSystemBarGraph():
 
 # carparkInfoList()
 # BasementCarparkPieChart()
-TypesOfCarparkSystemBarGraph()
+# TypesOfCarparkSystemBarGraph()
