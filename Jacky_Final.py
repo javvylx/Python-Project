@@ -21,6 +21,7 @@ def sortByArea():
     cat_name = list(cat_dict.keys())
     cat_v = list(cat_dict.values())
 
+    total = sum(cat_v)
     #plotting the chart, formatting the chart, bar chart to prevent labels from being cut off, automatically
     plt.rcParams.update({'figure.autolayout': True})
     fig, ax = plt.subplots()
@@ -33,7 +34,7 @@ def sortByArea():
     plt.setp(labels, rotation=45, horizontalalignment='right')
 
     #setting the name
-    ax.set(xlabel="Number of carparks", ylabel="Category/Area", title="Major Shopping Malls, Attractions and Hotels sorted by Category/Area")
+    ax.set(xlabel="Number of carparks", ylabel="Category/Area", title="Major Shopping Malls, Attractions and Hotels sorted by Category/Area\n (Total = %d)"%total)
     plt.show()
 
 
@@ -66,7 +67,7 @@ def sortByCarparkType():
     type_v = list(newdict.values())
     #explode is used to pull a specific data in the chart so that it stands out
     explode = [0,0,1]
-
+    total = sum(type_v)
     fig1, ax1 = plt.subplots()
     #autopct is to show the percentage, based on the formatting selected
     #therefore chosen formatting is to display in 2 d.p.
@@ -77,7 +78,7 @@ def sortByCarparkType():
               title="The Different Types of Carpark",
                bbox_to_anchor=(1, 0), loc="lower right")
 
-    ax1.set_title("Type of HDB Carparks")
+    ax1.set_title("Type of HDB Carparks\n(Total = %d)"%total)
     plt.show()
 
 
@@ -105,17 +106,14 @@ def sortCarTypeLots():
     lotType_v = list(lotType_dict.values())
 
     fig1, ax1 = plt.subplots()
-    #autopct is to show the percentage, based on the formatting selected
-    #For this part, because showing the number of lots has more value than the percentage
-    #i chose to show the value instead of percentage
     total = sum(lotType_v)
-    ax1.pie(lotType_v, labels=lotType_name, autopct=lambda(p): '{:.0f}'.format(p * total / 100), startangle=90)
+    ax1.pie(lotType_v, labels=lotType_name, autopct='%.2f%%', startangle=90)
     ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
     ax1.legend(lotType_name,
               title="The Different Types of Carpark",
                bbox_to_anchor=(1, 0), loc="lower right")
 
-    ax1.set_title("Number of lots for different vehicle type")
+    ax1.set_title("Number of lots for different vehicle type \n(Total lots = %d)"%total)
     plt.show()
 
 sortByArea()
