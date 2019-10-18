@@ -4,7 +4,7 @@ import requests
 
 
 def carparkInfoList():
-    url = "https://api.data.gov.sg/v1/transport/carpark-availability"  # Calling API data from Data.gov.sg {Function 1]
+    url = "https://api.data.gov.sg/v1/transport/carpark-availability"  # Calling API data from Data.gov.sg {Function 1}
     carparkdata = requests.get(url).json()["items"][0][
         "carpark_data"]  # Requests the URL data into Json format then store carparkdata into a list
     """ Creating a list to store the parameters """
@@ -58,12 +58,10 @@ def carparkInfoList():
     SearchCarParkNum = finaldf[finaldf['car_park_no'].str.match(carparkNumber)]
     # Create a dataframe of the carpark number that was searched by the unit n find a match for it
 
-    print "\n", "The Carpark Information selected is:\n ", SearchCarParkNum[["car_park_no", "address"]]
-    # List out the carpark number & address selected by the user. {Function 2}
-
-    print "\n", SearchCarParkNum[["Total Lots", "Lots Available", "Lots Occupied", "Update Date", "Update Time"]]
-
-    # List the Total Lots, Lots Available, Lots Occupied, Update Date & Update Time {Function 3}
+    # print "\n", "The Carpark Information selected is:\n ", SearchCarParkNum[["car_park_no", "address"]]
+    # List out the carpark number & address selected by the user.
+    # print "\n", SearchCarParkNum[["Total Lots", "Lots Available", "Lots Occupied", "Update Date", "Update Time"]]
+    # List the Total Lots, Lots Available, Lots Occupied, Update Date & Update Time
 
     print "\nData has also been output into a text file."
 
@@ -71,8 +69,7 @@ def carparkInfoList():
     print >> textout, "\n", "The Carpark Information selected is:\n ", SearchCarParkNum[["car_park_no", "address"]]
     print >> textout, "\n", SearchCarParkNum[
         ["Total Lots", "Lots Available", "Lots Occupied", "Update Date", "Update Time"]]
-
-    # Export into text file {Function 4}
+    # Export into text file {Function 2}
 
     lotsoccupied = 0  # Iterate 0 to lotsoccupied
     lotsavail = 0  # Iterate 0 to lotsavail
@@ -93,10 +90,13 @@ def carparkInfoList():
     labels = ["Carpark\nOccupied", "Carpark\nAvailable"]  # Create Labels for Bar Chart
     values = [lotsoccupied, lotsavail]  # Store Values in List
     totaldata = lotsoccupied + lotsavail  # Get the total lots data
+    fig, axs = plt.subplots(1, 1, constrained_layout=True) # Create a layout and set it to static, so that it allows a column to be displayed at the top of the chart
+    fig.suptitle(SearchCarParkNum[["address","Lots Available", "Lots Occupied", "Update Time"]], fontsize=12) # {Function 3}
+
     plt.bar(labels, values)  # Plot out bar graph
     plt.title(
         "Bar Chart of" + " " + carparkNumber + " " + "carpark(s) that has Occupied lots & Lots available" + "\n" + "(Total HDB Parking Lots = %d)" % totaldata)
-    plt.show()  # Show bar graph
+    plt.show()  # Show bar graph # {Function 4}
 
 
 def BasementCarparkPieChart():
@@ -126,7 +126,7 @@ def BasementCarparkPieChart():
 
     plt.title("Pie Chart of" + " " + carparkInput + " " + "carpark(s) that has basements")
 
-    plt.show()  # Show Pie Chart
+    plt.show()  # Show Pie Chart # {Function 5}
 
 """Pak's Function"""
 def TypesOfCarparkSystemBarGraph():
@@ -145,6 +145,6 @@ def TypesOfCarparkSystemBarGraph():
     plt.show()  # Show PieChart
 
 
-# carparkInfoList()
+carparkInfoList()
 # BasementCarparkPieChart()
 # TypesOfCarparkSystemBarGraph()
