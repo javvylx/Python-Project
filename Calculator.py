@@ -1,15 +1,84 @@
 import datetime
-from datetime import timedelta
-from Tkinter import *
-import Tkinter as tk
-from PIL import Image, ImageTk
-from ttk import *
 import pandas as pd
+import requests
+from pprint import pprint
 
 # Read CSV
-df = pd.read_csv("carparkFees.csv")
+# df = pd.read_csv("carparkFees.csv")
 
-# inputText = 'BANDA STREET / SAGO LANE OFF STREET'
+url = "https://www.ura.gov.sg/uraDataService/insertNewToken.action"
+header = {"AccessKey": "bbdbccd7-842d-4442-9485-e001137d4935"}
+response = requests.get(url, headers=header)
+token = response.json()['Result']
+
+header1 = {"AccessKey": "bbdbccd7-842d-4442-9485-e001137d4935",
+           "Token": token}
+
+url1 = "https://www.ura.gov.sg/uraDataService/invokeUraDS?service=Car_Park_Details"
+carparkRates = requests.get(url1, params={"service": "Car_Park_Details"}, headers=header1).json()['Result']
+weekDayRate = []
+weekDayMin = []
+satDayRate = []
+satDayMin = []
+sunPHRate = []
+sunPHMin = []
+carparkName = []
+ppCode = []
+vehCat = []
+startTime = []
+endTime = []
+totalLots = []
+parkingSystem = []
+
+for keys in carparkRates:
+    carparkName.append(keys["ppName"])
+    weekDayRate.append(keys["weekdayRate"])
+    satDayRate.append(keys["satdayRate"])
+    sunPHRate.append(keys["sunPHRate"])
+    startTime.append(keys["startTime"])
+    endTime.append(keys["endTime"])
+    ppCode.append(keys["ppCode"])
+    vehCat.append(keys["vehCat"])
+    weekDayMin.append(keys["weekdayMin"])
+    satDayMin.append(keys["satdayMin"])
+    sunPHMin.append(keys["sunPHMin"])
+    totalLots.append(keys["parkCapacity"])
+    parkingSystem.append(keys["parkingSystem"])
+
+carparkFees = {"ppCode": ppCode,
+               "Carpark Name": carparkName,
+               "WeekDay Rates": weekDayRate,
+               "Saturday Rates": satDayRate,
+               "Sunday & PH Rates": sunPHRate,
+               "Start Time": startTime,
+               "End Time": endTime,
+               "Lot Type": vehCat,
+               "WeekDay Minimum": weekDayMin,
+               "Saturday Minimum": satDayMin,
+               "Sunday & PH Minimum": sunPHMin,
+               "Total Lots": totalLots,
+               "Parking System": parkingSystem
+               }
+
+
+df = pd.DataFrame(carparkFees)
+
+df['Start Time'] = (df['Start Time'].str.replace('.', ':', regex=True))
+df['End Time'] = (df['End Time'].str.replace('.', ':', regex=True))
+
+x = 0
+for n in df['Start Time']:
+    while x < len(df['Start Time']):
+        df['Start Time'].iloc[x] = pd.to_datetime(df['Start Time'].iloc[x]).strftime('%H:%M')
+        df['Start Time'].iloc[x] = pd.to_datetime(df['Start Time'].iloc[x], format='%H%M', errors='ignore')
+        x += 1
+
+y = 0
+for n in df['End Time']:
+    while y < len(df['End Time']):
+        df['End Time'].iloc[y] = pd.to_datetime(df['End Time'].iloc[y]).strftime('%H:%M')
+        df['End Time'].iloc[y] = pd.to_datetime(df['End Time'].iloc[y], format='%H%M', errors='ignore')
+        y += 1
 
 # Input Text = Carpark Name, can use callback function , User has to input the desired lot type
 # output dataframe based on carpark name
@@ -36,8 +105,8 @@ dayofweek = timeStart.weekday()  # Get the day of week (e.g. Monday-Friday/Satur
 # This block of lines are to format the datatype of the time into datetime for calculation
 endYear = '2019'
 endMonth = '10'
-endDay = '14'
-endTime = '09:05'
+endDay = '15'
+endTime = '09:00'
 timeEnd = endYear + ' ' + endMonth + ' ' + endDay + ' ' + endTime
 timeEnd = pd.to_datetime(timeEnd).strftime('%Y/%m/%d %H:%M')
 timeEnd = datetime.datetime.strptime(timeEnd, '%Y/%m/%d %H:%M')
@@ -368,7 +437,7 @@ def countCarPrice(timeStart, timeEnd, startingTime):
                     # Get the row for when starting time is between two times
                     elif pd.to_datetime(userOutput['Start Time'].iloc[a],
                                         format='%H:%M').time() <= startingTime < pd.to_datetime(
-                            userOutput['End Time'].iloc[a], format='%H:%M').time():
+                        userOutput['End Time'].iloc[a], format='%H:%M').time():
                         minMins = int(userOutput['Saturday Minimum'].iloc[a].replace('mins', ""))
                         timeStart += datetime.timedelta(minutes=minMins)
                         startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
@@ -405,7 +474,7 @@ def countCarPrice(timeStart, timeEnd, startingTime):
                     # Get the row for when starting time is between two times
                     elif pd.to_datetime(userOutput['Start Time'].iloc[a],
                                         format='%H:%M').time() <= startingTime < pd.to_datetime(
-                            userOutput['End Time'].iloc[a], format='%H:%M').time():
+                        userOutput['End Time'].iloc[a], format='%H:%M').time():
                         minMins = int(userOutput['Sunday & PH Minimum'].iloc[a].replace('mins', ""))
                         timeStart += datetime.timedelta(minutes=minMins)
                         startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
@@ -451,7 +520,7 @@ def countCarPrice(timeStart, timeEnd, startingTime):
                     # Get the row for when starting time is between two times
                     elif pd.to_datetime(userOutput['Start Time'].iloc[a],
                                         format='%H:%M').time() <= startingTime < pd.to_datetime(
-                            userOutput['End Time'].iloc[a], format='%H:%M').time():
+                        userOutput['End Time'].iloc[a], format='%H:%M').time():
                         minMins = int(userOutput['WeekDay Minimum'].iloc[a].replace('mins', ""))
                         timeStart += datetime.timedelta(minutes=minMins)
                         startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
@@ -463,8 +532,8 @@ def countCarPrice(timeStart, timeEnd, startingTime):
                         if pd.to_datetime(userOutput['Start Time'].iloc[a],
                                           format='%H:%M').time() <= startingTime < pd.to_datetime('00:00',
                                                                                                   format='%H:%M').time() or pd.to_datetime(
-                                '00:00', format='%H:%M').time() <= startingTime < pd.to_datetime(
-                                userOutput['End Time'].iloc[a], format='%H:%M').time():
+                            '00:00', format='%H:%M').time() <= startingTime < pd.to_datetime(
+                            userOutput['End Time'].iloc[a], format='%H:%M').time():
                             minMins = int(userOutput['WeekDay Minimum'].iloc[a].replace("mins", ""))
                             timeStart += datetime.timedelta(minutes=minMins)
                             startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
@@ -491,7 +560,7 @@ def countCarPrice(timeStart, timeEnd, startingTime):
                     # Get the row for when starting time is between two times
                     elif pd.to_datetime(userOutput['Start Time'].iloc[a],
                                         format='%H:%M').time() <= startingTime < pd.to_datetime(
-                            userOutput['End Time'].iloc[a], format='%H:%M').time():
+                        userOutput['End Time'].iloc[a], format='%H:%M').time():
                         minMins = int(userOutput['Saturday Minimum'].iloc[a].replace('mins', ""))
                         timeStart += datetime.timedelta(minutes=minMins)
                         startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
@@ -503,8 +572,8 @@ def countCarPrice(timeStart, timeEnd, startingTime):
                         if pd.to_datetime(userOutput['Start Time'].iloc[a],
                                           format='%H:%M').time() <= startingTime < pd.to_datetime('00:00',
                                                                                                   format='%H:%M').time() or pd.to_datetime(
-                                '00:00', format='%H:%M').time() <= startingTime < pd.to_datetime(
-                                userOutput['End Time'].iloc[a], format='%H:%M').time():
+                            '00:00', format='%H:%M').time() <= startingTime < pd.to_datetime(
+                            userOutput['End Time'].iloc[a], format='%H:%M').time():
                             minMins = int(userOutput['Saturday Minimum'].iloc[a].replace("mins", ""))
                             timeStart += datetime.timedelta(minutes=minMins)
                             startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
@@ -531,7 +600,7 @@ def countCarPrice(timeStart, timeEnd, startingTime):
                     # Get the row for when starting time is between two times
                     elif pd.to_datetime(userOutput['Start Time'].iloc[a],
                                         format='%H:%M').time() <= startingTime < pd.to_datetime(
-                            userOutput['End Time'].iloc[a], format='%H:%M').time():
+                        userOutput['End Time'].iloc[a], format='%H:%M').time():
                         minMins = int(userOutput['Sunday & PH Minimum'].iloc[a].replace('mins', ""))
                         timeStart += datetime.timedelta(minutes=minMins)
                         startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
@@ -543,8 +612,8 @@ def countCarPrice(timeStart, timeEnd, startingTime):
                         if pd.to_datetime(userOutput['Start Time'].iloc[a],
                                           format='%H:%M').time() <= startingTime < pd.to_datetime('00:00',
                                                                                                   format='%H:%M').time() or pd.to_datetime(
-                                '00:00', format='%H:%M').time() <= startingTime < pd.to_datetime(
-                                userOutput['End Time'].iloc[a], format='%H:%M').time():
+                            '00:00', format='%H:%M').time() <= startingTime < pd.to_datetime(
+                            userOutput['End Time'].iloc[a], format='%H:%M').time():
                             minMins = int(userOutput['Sunday & PH Minimum'].iloc[a].replace("mins", ""))
                             timeStart += datetime.timedelta(minutes=minMins)
                             startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
