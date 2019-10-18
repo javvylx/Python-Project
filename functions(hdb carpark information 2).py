@@ -20,19 +20,21 @@ def getTypes_shorttermparking():
 
 def find_shorttermparking(types):
     '''find all carparks with same short term parking types'''
-    carparks = []
+    
+    carparks = pd.DataFrame(columns=['Carpark Address'])
     for carpark in range(len(df)):
         if df.loc[carpark, 'short_term_parking'] == types.upper():
-            carparks.append(df.loc[carpark][1])
+            carparks.loc[len(carparks)] = df.loc[carpark][1]
     
-    if carparks == []:
+    if len(carparks) == 0:
         return getTypes_shorttermparking()
     else:
         return carparks
-    #return len(carparks) for number of carparks with 'type'
+        #return len(carparks)
     
 #getTypes_shorttermparking() #returns this ['WHOLE DAY', '7AM-7PM', 'NO', '7AM-10.30PM']
 #find_shorttermparking('7AM-10.30PM')
+
 
 def sortby_carparkdecks(chart_type = 'bar'):
     '''show a chart. pie/bar'''
