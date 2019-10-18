@@ -52,8 +52,8 @@ userOutput = output[
 
 startYear = '2019'
 startMonth = '10'
-startDay = '16'
-startTime = '22:30'
+startDay = '14'
+startTime = '00:00'
 
 timeStart = startYear + ' ' + startMonth + ' ' + startDay + ' ' + startTime
 timeStart = pd.to_datetime(timeStart).strftime('%Y/%m/%d %H:%M')
@@ -63,8 +63,8 @@ dayofweek = timeStart.weekday()
 
 endYear = '2019'
 endMonth = '10'
-endDay = '17'
-endTime = '07:00'
+endDay = '20'
+endTime = '00:00'
 timeEnd = endYear + ' ' + endMonth + ' ' + endDay + ' ' + endTime
 timeEnd = pd.to_datetime(timeEnd).strftime('%Y/%m/%d %H:%M')
 timeEnd = datetime.datetime.strptime(timeEnd, '%Y/%m/%d %H:%M')
@@ -95,7 +95,8 @@ print type(timeEnd - timeStart)
 count = 0
 
 
-def countCarPrice(timeStart, timeEnd, startingTime, count):
+def countCarPrice(timeStart, timeEnd, startingTime):
+    count = 0
     if inputLotType == "Car":
         a = 0
         while a < len(userOutput):
@@ -110,14 +111,18 @@ def countCarPrice(timeStart, timeEnd, startingTime, count):
                             timeStart += datetime.timedelta(minutes=minMins)
                             startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
                             count += float(userOutput['WeekDay Rates'].iloc[a].replace('$', ""))
-                            print count, startingTime
-                            return count + countCarPrice(timeStart, timeEnd, startingTime, count)
+                            print count, startingTime, '1'
+                            return count + countCarPrice(timeStart, timeEnd, startingTime)
                         elif pd.to_datetime(userOutput['Start Time'].iloc[a], format='%H:%M').time() >  pd.to_datetime(userOutput['End Time'].iloc[a], format='%H:%M').time() >= startingTime:
-                            timeStart += datetime.timedelta(minutes=30)
-                            startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
-                            count += float(userOutput['WeekDay Rates'].iloc[a].replace('$', ""))
-                            print count, startingTime
-                            return count + countCarPrice(timeStart, timeEnd, startingTime, count)
+                            if userOutput['WeekDay Minimum'].iloc[a] == '30 mins':
+                                timeStart += datetime.timedelta(minutes=30)
+                                startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
+                                count += float(userOutput['WeekDay Rates'].iloc[a].replace('$',""))
+                                print count, startingTime, '2'
+                                return count + countCarPrice(timeStart, timeEnd, startingTime)
+                            else:
+                                count += 0
+                                print count, startingTime
                     elif startingTime >= pd.to_datetime('22:30', format='%H:%M').time():
                         if timeStart == timeEnd:
                             count += 0
@@ -125,34 +130,117 @@ def countCarPrice(timeStart, timeEnd, startingTime, count):
                         elif timeEnd - timeStart < datetime.timedelta(minutes=510):
                             if userOutput['WeekDay Minimum'].iloc[a] != '30 mins':
                                 count += 0
-                                print count, startingTime
-                                return count
-                            elif userOutput['WeekDay Minimum'].iloc[a] == '30 mins':
+                                print count, startingTime, 'yo'
+                            elif userOutput['WeekDay Minimum'].iloc[a] == '30 mins' and pd.to_datetime(userOutput['Start Time'].iloc[a], format='%H:%M').time() == pd.to_datetime('22:30', format='%H:%M').time():
                                 timeStart += datetime.timedelta(minutes=30)
                                 startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
                                 count += float(userOutput['WeekDay Rates'].iloc[a].replace('$', ""))
-                                print count, startingTime
-                                return count + countCarPrice(timeStart, timeEnd, startingTime, count)
+                                print count, startingTime, '3'
+                                return count + countCarPrice(timeStart, timeEnd, startingTime)
                         elif timeEnd - timeStart >= datetime.timedelta(minutes=510) and pd.to_datetime(timeStart + datetime.timedelta(minutes=510), format='%H:%M').time() <= pd.to_datetime('07:00', format='%H:%M').time():
-                            # for n in userOutput['WeekDay Minimum']:
-                            #     for y in userOutput['WeekDay Rates']:
-                            #         if n == '510 mins':
-                            #             timeStart += datetime.timedelta(minutes=510)
-                            #             startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
-                            #             count += float(y.replace('$',""))
-                            #             print count, startingTime
-                            #             return count + countCarPrice(timeStart, timeEnd, startingTime, count)
-
                             if userOutput['WeekDay Minimum'].iloc[a] == '510 mins':
                                 timeStart += datetime.timedelta(minutes=510)
                                 startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
                                 count += float(userOutput['WeekDay Rates'].iloc[a].replace('$',""))
+                                print count, startingTime, '4'
+                                return count + countCarPrice(timeStart, timeEnd, startingTime)
+                            else:
+                                count += 0
                                 print count, startingTime
-                                return count + countCarPrice(timeStart, timeEnd, startingTime, count)
+                elif timeStart.weekday() == 5:
+                    if pd.to_datetime('00:00', format='%H:%M').time() <= startingTime < pd.to_datetime('22:30', format='%H:%M').time():
+                        if timeStart == timeEnd:
+                            count += 0
+                            return count
+                        elif pd.to_datetime(userOutput['Start Time'].iloc[a], format='%H:%M').time() <= startingTime < pd.to_datetime(userOutput['End Time'].iloc[a], format='%H:%M').time():
+                            minMins = int(userOutput['Saturday Minimum'].iloc[a].replace('mins', ""))
+                            timeStart += datetime.timedelta(minutes=minMins)
+                            startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
+                            count += float(userOutput['Saturday Rates'].iloc[a].replace('$', ""))
+                            print count, startingTime, '1'
+                            return count + countCarPrice(timeStart, timeEnd, startingTime)
+                        elif pd.to_datetime(userOutput['Start Time'].iloc[a], format='%H:%M').time() >  pd.to_datetime(userOutput['End Time'].iloc[a], format='%H:%M').time() >= startingTime:
+                            if userOutput['Saturday Minimum'].iloc[a] == '30 mins':
+                                timeStart += datetime.timedelta(minutes=30)
+                                startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
+                                count += float(userOutput['Saturday Rates'].iloc[a].replace('$',""))
+                                print count, startingTime, '2'
+                                return count + countCarPrice(timeStart, timeEnd, startingTime)
+                            else:
+                                count += 0
+                                print count, startingTime
+                    elif startingTime >= pd.to_datetime('22:30', format='%H:%M').time():
+                        if timeStart == timeEnd:
+                            count += 0
+                            return count
+                        elif timeEnd - timeStart < datetime.timedelta(minutes=510):
+                            if userOutput['Saturday Minimum'].iloc[a] != '30 mins':
+                                count += 0
+                                print count, startingTime, 'yo'
+                            elif userOutput['Saturday Minimum'].iloc[a] == '30 mins' and pd.to_datetime(userOutput['Start Time'].iloc[a], format='%H:%M').time() == pd.to_datetime('22:30', format='%H:%M').time():
+                                timeStart += datetime.timedelta(minutes=30)
+                                startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
+                                count += float(userOutput['Saturday Rates'].iloc[a].replace('$', ""))
+                                print count, startingTime, '3'
+                                return count + countCarPrice(timeStart, timeEnd, startingTime)
+                        elif timeEnd - timeStart >= datetime.timedelta(minutes=510) and pd.to_datetime(timeStart + datetime.timedelta(minutes=510), format='%H:%M').time() <= pd.to_datetime('07:00', format='%H:%M').time():
+                            if userOutput['Saturday Minimum'].iloc[a] == '510 mins':
+                                timeStart += datetime.timedelta(minutes=510)
+                                startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
+                                count += float(userOutput['Saturday Rates'].iloc[a].replace('$',""))
+                                print count, startingTime, '4'
+                                return count + countCarPrice(timeStart, timeEnd, startingTime)
+                            else:
+                                count += 0
+                                print count, startingTime
+
+                elif timeStart.weekday() == 6:
+                    if pd.to_datetime('00:00', format='%H:%M').time() <= startingTime < pd.to_datetime('22:30', format='%H:%M').time():
+                        if timeStart == timeEnd:
+                            count += 0
+                            return count
+                        elif pd.to_datetime(userOutput['Start Time'].iloc[a], format='%H:%M').time() <= startingTime < pd.to_datetime(userOutput['End Time'].iloc[a], format='%H:%M').time():
+                            minMins = int(userOutput['Sunday & PH Minimum'].iloc[a].replace('mins', ""))
+                            timeStart += datetime.timedelta(minutes=minMins)
+                            startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
+                            count += float(userOutput['Sunday & PH Rates'].iloc[a].replace('$', ""))
+                            print count, startingTime, '1'
+                            return count + countCarPrice(timeStart, timeEnd, startingTime)
+                        elif pd.to_datetime(userOutput['Start Time'].iloc[a], format='%H:%M').time() >  pd.to_datetime(userOutput['End Time'].iloc[a], format='%H:%M').time() >= startingTime:
+                            if userOutput['Sunday & PH Minimum'].iloc[a] == '30 mins':
+                                timeStart += datetime.timedelta(minutes=30)
+                                startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
+                                count += float(userOutput['Sunday & PH Rates'].iloc[a].replace('$',""))
+                                print count, startingTime, '2'
+                                return count + countCarPrice(timeStart, timeEnd, startingTime)
+                            else:
+                                count += 0
+                                print count, startingTime
+                    elif startingTime >= pd.to_datetime('22:30', format='%H:%M').time():
+                        if timeStart == timeEnd:
+                            count += 0
+                            return count
+                        elif timeEnd - timeStart < datetime.timedelta(minutes=510):
+                            if userOutput['Sunday & PH Minimum'].iloc[a] != '30 mins':
+                                count += 0
+                                print count, startingTime, 'yo'
+                            elif userOutput['Sunday & PH Minimum'].iloc[a] == '30 mins' and pd.to_datetime(userOutput['Start Time'].iloc[a], format='%H:%M').time() == pd.to_datetime('22:30', format='%H:%M').time():
+                                timeStart += datetime.timedelta(minutes=30)
+                                startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
+                                count += float(userOutput['Sunday & PH Rates'].iloc[a].replace('$', ""))
+                                print count, startingTime, '3'
+                                return count + countCarPrice(timeStart, timeEnd, startingTime)
+                        elif timeEnd - timeStart >= datetime.timedelta(minutes=510) and pd.to_datetime(timeStart + datetime.timedelta(minutes=510), format='%H:%M').time() <= pd.to_datetime('07:00', format='%H:%M').time():
+                            if userOutput['Sunday & PH Minimum'].iloc[a] == '510 mins':
+                                timeStart += datetime.timedelta(minutes=510)
+                                startingTime = pd.to_datetime(timeStart, format='%H:%M').time()
+                                count += float(userOutput['Sunday & PH Rates'].iloc[a].replace('$',""))
+                                print count, startingTime, '4'
+                                return count + countCarPrice(timeStart, timeEnd, startingTime)
                             else:
                                 count += 0
                                 print count, startingTime
             a += 1
 
 
-print 'The total price is %0.2f' % countCarPrice(timeStart, timeEnd, startingTime, count)
+print 'The total price is %0.2f' % countCarPrice(timeStart, timeEnd, startingTime)
